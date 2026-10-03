@@ -1,0 +1,12 @@
+{"schema":1,"file":"measurement-types.json","items":[
+ {"id":"mt:height","key":"height","label":"Height","canonicalUnit":"cm","min":50,"max":250,"softMin":120,"softMax":220,"decimals":1,"approx":false,"v1":true,"sortOrder":1},
+ {"id":"mt:weight","key":"weight","label":"Weight","canonicalUnit":"kg","min":20,"max":400,"softMin":35,"softMax":200,"decimals":1,"approx":false,"v1":true,"sortOrder":2},
+ {"id":"mt:bodyFat","key":"bodyFat","label":"Body fat","canonicalUnit":"%","min":2,"max":70,"softMin":5,"softMax":50,"decimals":1,"approx":true,"v1":true,"sortOrder":3},
+ {"id":"mt:biceps","key":"biceps","label":"Biceps","canonicalUnit":"cm","min":10,"max":80,"softMin":null,"softMax":null,"decimals":1,"approx":false,"v1":true,"sortOrder":4},
+ {"id":"mt:thigh","key":"thigh","label":"Thigh","canonicalUnit":"cm","min":20,"max":120,"softMin":null,"softMax":null,"decimals":1,"approx":false,"v1":true,"sortOrder":5},
+ {"id":"mt:waist","key":"waist","label":"Waist","canonicalUnit":"cm","min":30,"max":250,"softMin":null,"softMax":null,"decimals":1,"approx":false,"v1":true,"sortOrder":6},
+ {"id":"mt:chest","key":"chest","label":"Chest","canonicalUnit":"cm","min":40,"max":250,"softMin":null,"softMax":null,"decimals":1,"approx":false,"v1":false,"sortOrder":7},
+ {"id":"mt:hips","key":"hips","label":"Hips","canonicalUnit":"cm","min":40,"max":250,"softMin":null,"softMax":null,"decimals":1,"approx":false,"v1":false,"sortOrder":8},
+ {"id":"mt:neck","key":"neck","label":"Neck","canonicalUnit":"cm","min":15,"max":80,"softMin":null,"softMax":null,"decimals":1,"approx":false,"v1":false,"sortOrder":9},
+ {"id":"mt:calf","key":"calf","label":"Calf","canonicalUnit":"cm","min":15,"max":80,"softMin":null,"softMax":null,"decimals":1,"approx":false,"v1":false,"sortOrder":10}
+]}

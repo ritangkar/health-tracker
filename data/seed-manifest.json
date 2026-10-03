@@ -1,0 +1,104 @@
+{
+ "schema": 1,
+ "file": "seed-manifest.json",
+ "seedVersion": 11,
+ "note": "seedVersion must equal WA_SEED_VERSION in version.js. Bump both on ANY change under data/. Later food chunks append their file to files[] and update count.",
+ "files": [
+  {
+   "path": "categories.json",
+   "count": 31
+  },
+  {
+   "path": "meal-categories.json",
+   "count": 5
+  },
+  {
+   "path": "measurement-types.json",
+   "count": 10
+  },
+  {
+   "path": "exercises.json",
+   "count": 60
+  },
+  {
+   "path": "plans.json",
+   "count": 6
+  },
+  {
+   "path": "foods-starter.json",
+   "count": 44
+  },
+  {
+   "path": "foods-staples-a.json",
+   "count": 132
+  },
+  {
+   "path": "foods-staples-b.json",
+   "count": 198
+  },
+  {
+   "path": "foods-indian-home-a.json",
+   "count": 179
+  },
+  {
+   "path": "foods-indian-home-b.json",
+   "count": 187
+  },
+  {
+   "path": "foods-bengali.json",
+   "count": 165
+  },
+  {
+   "path": "foods-restaurant-indian.json",
+   "count": 105
+  },
+  {
+   "path": "foods-packaged.json",
+   "count": 84
+  },
+  {
+   "path": "foods-restaurant-world-a.json",
+   "count": 191
+  },
+  {
+   "path": "foods-restaurant-world-b.json",
+   "count": 190
+  },
+  {
+   "path": "foods-restaurant-world-c.json",
+   "count": 197
+  }
+ ],
+ "sources": [
+  {
+   "id": "src-author",
+   "title": "Project-authored values",
+   "status": "used",
+   "note": "Typical values written for this project from general nutrition knowledge. Not copied from any database."
+  },
+  {
+   "id": "src-ifct2017",
+   "title": "Indian Food Composition Tables 2017 (NIN/ICMR)",
+   "status": "not-imported",
+   "note": "Not an open licence. Nothing imported. May be used only to sanity-check raw staples, with acknowledgement."
+  },
+  {
+   "id": "src-indb",
+   "title": "Indian Nutrient Databank",
+   "status": "not-used",
+   "note": "Licence not verified."
+  },
+  {
+   "id": "src-usda",
+   "title": "USDA FoodData Central",
+   "status": "not-used",
+   "note": "Believed public domain; verify date and URL before any use."
+  },
+  {
+   "id": "src-labels",
+   "title": "Label values entered by users",
+   "status": "user-data",
+   "note": "Custom foods only, never in the seed."
+  }
+ ]
+}

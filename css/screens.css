@@ -1,0 +1,44 @@
+/* Layout skeleton for D-065 breakpoints. A3. Screens add their own classes in css/screens.css sections below the marker. */
+.shell { min-height: 100dvh; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto 1fr; grid-template-areas: "top" "banner" "main"; padding-left: var(--safe-l); padding-right: var(--safe-r); }
+.topbar { grid-area: top; display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); padding: calc(var(--sp-2) + var(--safe-t)) var(--sp-4) var(--sp-2); position: sticky; top: 0; z-index: var(--z-nav); background: var(--bg); }
+.banner-slot { grid-area: banner; padding: 0 var(--sp-4); } .banner-slot:empty { display: none; }
+.main { grid-area: main; padding: var(--sp-2) var(--sp-4) calc(var(--nav-h) + var(--safe-b) + var(--sp-8)); min-width: 0; outline: none; }
+.screen { width: 100%; max-width: var(--content-max); margin: 0 auto; display: flex; flex-direction: column; gap: var(--sp-4); }
+.screen-narrow { max-width: 560px; }
+.screen-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--sp-3); }
+.screen-head > * { min-width: 0; }
+.screen-head h1 { overflow-wrap: anywhere; }
+.field-label, .field-hint, dt, .tile-sub, .chip-est { overflow-wrap: anywhere; }
+.chip-est { min-width: 0; height: auto; }
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3); }
+.two-col { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-4); }
+.sticky-actions { position: sticky; bottom: calc(var(--nav-h) + var(--safe-b) + var(--sp-2)); z-index: var(--z-content); display: flex; gap: var(--sp-2); overflow-x: auto; padding: var(--sp-2) 0; }
+.tile, .tile-label { min-width: 0; overflow-wrap: anywhere; }
+/* Tiles use rem so they stack to one column when the text size doubles (F-A10-01). */
+@media (max-width: 599px) { .tiles { grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); } }
+/* bottom bar (< 840) */
+.nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-nav); display: flex; justify-content: space-around; height: calc(var(--nav-h) + var(--safe-b)); padding: 0 var(--safe-r) var(--safe-b) var(--safe-l); background: var(--surface); border-top: 1px solid var(--border); }
+.nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: var(--tap); color: var(--text-secondary); text-decoration: none; font-size: var(--fs-12); font-weight: 600; position: relative; }
+.nav-item[aria-current="page"] { color: var(--primary); }
+.nav-item[aria-current="page"]::before { content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 3px; border-radius: 0 0 3px 3px; background: var(--primary); }
+.nav-settings { display: none; }
+.shell--bare .nav, .shell--bare .topbar { display: none; }
+.shell--bare .main { padding-bottom: var(--sp-8); }
+.shell--bare .toast-region { bottom: var(--sp-6); }
+@media (min-width: 600px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); } .main { padding-left: var(--sp-6); padding-right: var(--sp-6); } .topbar { padding-left: var(--sp-6); padding-right: var(--sp-6); } .banner-slot { padding: 0 var(--sp-6); } }
+@media (max-height: 700px) { .sticky-actions { position: static; } }
+@media (max-height: 480px) and (orientation: landscape) { .nav-label { display: none; } :root { --nav-h: 48px; } }
+/* side nav (>= 840) */
+@media (min-width: 840px) {
+  .shell { grid-template-columns: var(--side-w) minmax(0, 1fr); grid-template-areas: "nav top" "nav banner" "nav main"; }
+  .nav { position: sticky; grid-area: nav; top: 0; height: 100dvh; flex-direction: column; justify-content: flex-start; gap: var(--sp-1); padding: calc(var(--sp-6) + var(--safe-t)) var(--sp-3) var(--sp-4); border-top: 0; border-right: 1px solid var(--border); }
+  .nav-item { flex: 0 0 auto; flex-direction: row; justify-content: flex-start; gap: var(--sp-3); min-height: var(--tap); padding: 0 var(--sp-4); border-radius: var(--r-input); font-size: var(--fs-16); }
+  .nav-item[aria-current="page"] { background: var(--primary-soft); color: var(--text); }
+  .nav-item[aria-current="page"]::before { top: 8px; bottom: 8px; left: 0; right: auto; width: 3px; height: auto; border-radius: 0 3px 3px 0; }
+  .nav-settings { display: flex; margin-top: auto; }
+  .main { padding-bottom: var(--sp-8); } .toast-region { bottom: var(--sp-6); left: var(--side-w); }
+  .sticky-actions { bottom: var(--sp-2); }
+  .shell--bare { grid-template-columns: minmax(0, 1fr); grid-template-areas: "top" "banner" "main"; }
+}
+@media (min-width: 1200px) { :root { --content-max: 1120px; } .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* ---- screen-agent additions go below this line (A4..A6) ---- */

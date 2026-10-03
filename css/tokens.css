@@ -1,0 +1,64 @@
+/* Winter Arc design tokens (D-049..D-051). A3.
+   Three blocks: light (:root), dark via OS setting, dark via data-theme override.
+   tests/tests-ui.js parses these blocks and checks every contrast pair. Keep the two dark blocks identical.
+   Adjusted from D-049 (recorded, D-086): --c-fiber light #4A7527 (was #4E7A2A, 4.49:1 on surface-2).
+   Added: --border-strong (inputs, 3:1), --primary-soft, --warning-soft. */
+:root {
+  --bg: #F7F8F6; --surface: #FFFFFF; --surface-2: #EEF2EF;
+  --text: #14201A; --text-secondary: #4A5A52;
+  --primary: #0E6B5C; --on-primary: #FFFFFF; --primary-soft: #DCEFE9;
+  --border: #CBD5CF; --border-strong: #7A8A81;
+  --c-protein: #B4432F; --c-carbs: #8A6100; --c-fat: #2F5FB3; --c-fiber: #4A7527;
+  --c-steps: #0E6B5C; --c-water: #1A6FA8; --c-sleep: #5B4BB0;
+  --warning: #8A5A00; --warning-soft: #FFF1D6; --danger: #B3261E; --success: #1B6E3A;
+  --scrim: rgba(10, 20, 15, 0.5);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1513; --surface: #18201C; --surface-2: #212B26;
+    --text: #E8EFEA; --text-secondary: #A9B8B0;
+    --primary: #5FD1B8; --on-primary: #06201A; --primary-soft: #17332D;
+    --border: #2C3A33; --border-strong: #6B7F75;
+    --c-protein: #FF9C88; --c-carbs: #F0C14B; --c-fat: #9DBDFF; --c-fiber: #A5D67A;
+    --c-steps: #5FD1B8; --c-water: #7CC4F2; --c-sleep: #BDB2FF;
+    --warning: #FFCB6B; --warning-soft: #3A2E10; --danger: #FFB4AB; --success: #8DDCA4;
+    --scrim: rgba(0, 0, 0, 0.62);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1513; --surface: #18201C; --surface-2: #212B26;
+  --text: #E8EFEA; --text-secondary: #A9B8B0;
+  --primary: #5FD1B8; --on-primary: #06201A; --primary-soft: #17332D;
+  --border: #2C3A33; --border-strong: #6B7F75;
+  --c-protein: #FF9C88; --c-carbs: #F0C14B; --c-fat: #9DBDFF; --c-fiber: #A5D67A;
+  --c-steps: #5FD1B8; --c-water: #7CC4F2; --c-sleep: #BDB2FF;
+  --warning: #FFCB6B; --warning-soft: #3A2E10; --danger: #FFB4AB; --success: #8DDCA4;
+  --scrim: rgba(0, 0, 0, 0.62);
+  color-scheme: dark;
+}
+/* Mode-independent tokens */
+:root {
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --fs-12: 0.75rem; --fs-14: 0.875rem; --fs-16: 1rem; --fs-18: 1.125rem; --fs-20: 1.25rem; --fs-24: 1.5rem; --fs-32: 2rem; --fs-44: 2.75rem;
+  --lh-body: 1.4; --lh-head: 1.2;
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
+  --r-input: 8px; --r-card: 12px; --r-sheet: 16px; --r-tile: 24px; --r-pill: 999px;
+  --tap: 44px; --nav-h: 56px; --side-w: 232px; --content-max: 960px;
+  --e0: none;
+  --e1: 0 1px 2px rgba(10, 30, 22, 0.08), 0 1px 1px rgba(10, 30, 22, 0.05);
+  --e2: 0 4px 12px rgba(10, 30, 22, 0.10);
+  --e3: 0 12px 32px rgba(10, 30, 22, 0.18);
+  --dur-1: 120ms; --dur-2: 200ms; --dur-3: 300ms; --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --z-content: 1; --z-nav: 20; --z-banner: 30; --z-sheet: 40; --z-toast: 50;
+  --safe-t: env(safe-area-inset-top, 0px); --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px); --safe-r: env(safe-area-inset-right, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --e1: 0 0 0 1px var(--border); --e2: 0 0 0 1px var(--border); --e3: 0 0 0 1px var(--border-strong); }
+}
+:root[data-theme="dark"] { --e1: 0 0 0 1px var(--border); --e2: 0 0 0 1px var(--border); --e3: 0 0 0 1px var(--border-strong); }
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; }
+}

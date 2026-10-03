@@ -1,0 +1,29 @@
+/* Base: reset, typography, focus, utilities. A3. */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; height: 100%; }
+body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); font-family: var(--font); font-size: var(--fs-16); line-height: var(--lh-body); font-variant-numeric: tabular-nums; -webkit-tap-highlight-color: transparent; }
+h1, h2, h3, h4 { line-height: var(--lh-head); margin: 0; font-weight: 700; }
+h1 { font-size: var(--fs-24); } h2 { font-size: var(--fs-20); } h3 { font-size: var(--fs-18); font-weight: 600; } h4 { font-size: var(--fs-16); font-weight: 600; }
+p { margin: 0; }
+a { color: var(--primary); text-underline-offset: 2px; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+img, svg { max-width: 100%; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: var(--r-input); }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.muted { color: var(--text-secondary); }
+.small { font-size: var(--fs-14); }
+.tiny { font-size: var(--fs-12); }
+.num { font-variant-numeric: tabular-nums; }
+.stack { display: flex; flex-direction: column; gap: var(--sp-4); }
+.stack-sm { display: flex; flex-direction: column; gap: var(--sp-2); }
+.row { display: flex; align-items: center; gap: var(--sp-3); }
+.row-wrap { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); }
+.spread { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); }
+.grow { flex: 1 1 auto; min-width: 0; }
+.skip-link { position: absolute; left: var(--sp-2); top: -100px; z-index: 100; background: var(--primary); color: var(--on-primary); min-height: var(--tap); display: inline-flex; align-items: center; padding: 0 var(--sp-4); border-radius: var(--r-input); }
+.skip-link:focus { top: calc(var(--safe-t) + var(--sp-2)); }
+.icon { display: inline-block; vertical-align: middle; flex: none; }

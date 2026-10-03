@@ -1,0 +1,7 @@
+{"schema":1,"file":"meal-categories.json","note":"clockFrom inclusive, clockTo exclusive (local hour). Used only to preselect a meal chip (D-046).","items":[
+ {"id":"meal:breakfast","label":"Breakfast","sortOrder":1,"clockFrom":0,"clockTo":11},
+ {"id":"meal:lunch","label":"Lunch","sortOrder":2,"clockFrom":11,"clockTo":15},
+ {"id":"meal:snacks","label":"Snacks","sortOrder":3,"clockFrom":15,"clockTo":18},
+ {"id":"meal:dinner","label":"Dinner","sortOrder":4,"clockFrom":18,"clockTo":23},
+ {"id":"meal:other","label":"Other","sortOrder":5,"clockFrom":23,"clockTo":24}
+]}
