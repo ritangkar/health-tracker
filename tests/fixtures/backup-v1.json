@@ -1,0 +1,593 @@
+{
+ "manifest": {
+  "format": "winter-arc-backup",
+  "formatVersion": 1,
+  "schemaVersion": 1,
+  "appVersion": "0.0.0-fixture",
+  "seedVersion": 0,
+  "createdAt": 1700000000000,
+  "installId": "in_fixture",
+  "includesPhotos": false,
+  "profiles": [
+   {
+    "id": "p_fixture_a1",
+    "name": "Test Person A"
+   },
+   {
+    "id": "p_fixture_b1",
+    "name": "Test Person B"
+   }
+  ],
+  "counts": {
+   "profiles": 2,
+   "settings": 2,
+   "foods": 2,
+   "foodPrefs": 1,
+   "exercises": 1,
+   "plans": 1,
+   "foodLogs": 2,
+   "workoutLogs": 1,
+   "days": 2,
+   "sleepLogs": 1,
+   "measurementTypes": 0,
+   "measurements": 2,
+   "checkins": 1,
+   "photos": 0
+  },
+  "exportCategories": {
+   "users": "profiles",
+   "goals": "settings.targetsHistory",
+   "custom foods/recipes": "foods",
+   "exercise library": "exercises",
+   "workout plans": "plans",
+   "daily/step/water logs, notes": "days",
+   "food logs": "foodLogs",
+   "exercise logs": "workoutLogs",
+   "sleep logs": "sleepLogs",
+   "measurements": "measurementTypes+measurements",
+   "check-ins": "checkins",
+   "photos": "photos+files",
+   "settings": "settings",
+   "favourites/recents": "foodPrefs"
+  },
+  "files": []
+ },
+ "data": {
+  "profiles": [
+   {
+    "id": "p_fixture_a1",
+    "name": "Test Person A",
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000,
+    "sortOrder": 0,
+    "archivedAt": null
+   },
+   {
+    "id": "p_fixture_b1",
+    "name": "Test Person B",
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000,
+    "sortOrder": 1,
+    "archivedAt": null
+   }
+  ],
+  "settings": [
+   {
+    "pid": "p_fixture_a1",
+    "units": "metric",
+    "weekStart": "mon",
+    "glassMl": 500,
+    "defaultStepGoal": 7000,
+    "targetsHistory": [
+     {
+      "from": "2025-01-01",
+      "kcal": 1900,
+      "protein": 120,
+      "carbs": 220,
+      "fat": 60,
+      "fiber": 25,
+      "waterMl": 3000,
+      "steps": 7000
+     }
+    ],
+    "hiddenSeed": {
+     "foods": [],
+     "exercises": [],
+     "plans": []
+    },
+    "mealCategories": null,
+    "reminder": {
+     "intervalDays": 7
+    },
+    "uiPrefs": {
+     "openLastProfile": false,
+     "checkinIntervalDays": 7
+    },
+    "updatedAt": 1700000000000
+   },
+   {
+    "pid": "p_fixture_b1",
+    "units": "metric",
+    "weekStart": "mon",
+    "glassMl": 500,
+    "defaultStepGoal": 7000,
+    "targetsHistory": [
+     {
+      "from": "2025-01-01",
+      "kcal": 1900,
+      "protein": 120,
+      "carbs": 220,
+      "fat": 60,
+      "fiber": 25,
+      "waterMl": 3000,
+      "steps": 7000
+     }
+    ],
+    "hiddenSeed": {
+     "foods": [],
+     "exercises": [],
+     "plans": []
+    },
+    "mealCategories": null,
+    "reminder": {
+     "intervalDays": 7
+    },
+    "uiPrefs": {
+     "openLastProfile": false,
+     "checkinIntervalDays": 7
+    },
+    "updatedAt": 1700000000000
+   }
+  ],
+  "foods": [
+   {
+    "id": "fd_fixture_rice1",
+    "pid": "p_fixture_a1",
+    "kind": "food",
+    "name": "Test Rice",
+    "nameKey": "test rice",
+    "aliases": [],
+    "category": "grain-rice",
+    "cuisine": "indian",
+    "origin": "home",
+    "source": {
+     "type": "user"
+    },
+    "confidence": "typical",
+    "system": false,
+    "nutrition": {
+     "per": {
+      "amount": 100,
+      "unit": "g"
+     },
+     "kcal": 130,
+     "protein": 2.7,
+     "carbs": 28,
+     "fat": 0.3,
+     "fiber": 0.4
+    },
+    "servings": [
+     {
+      "id": "s1",
+      "label": "1 cup (160 g)",
+      "unit": "cup",
+      "baseAmount": 160,
+      "approx": true
+     }
+    ],
+    "defaultServingId": "s1",
+    "notes": "",
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000,
+    "rev": 1
+   },
+   {
+    "id": "fd_fixture_dal1",
+    "pid": "p_fixture_b1",
+    "kind": "food",
+    "name": "Test Dal",
+    "nameKey": "test dal",
+    "aliases": [],
+    "category": "dal-legume",
+    "cuisine": "indian",
+    "origin": "home",
+    "source": {
+     "type": "user"
+    },
+    "confidence": "typical",
+    "system": false,
+    "nutrition": {
+     "per": {
+      "amount": 100,
+      "unit": "ml"
+     },
+     "kcal": 90,
+     "protein": 6,
+     "carbs": 12,
+     "fat": 2,
+     "fiber": 3
+    },
+    "servings": [
+     {
+      "id": "s1",
+      "label": "1 bowl (200 ml)",
+      "unit": "bowl",
+      "baseAmount": 200,
+      "approx": true
+     }
+    ],
+    "defaultServingId": "s1",
+    "notes": "",
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000,
+    "rev": 1
+   }
+  ],
+  "foodPrefs": [
+   {
+    "pid": "p_fixture_a1",
+    "foodRef": "fd_fixture_rice1",
+    "fav": 1,
+    "useCount": 1,
+    "lastUsedAt": 1700000000000,
+    "lastServingId": "s1",
+    "lastQty": 1,
+    "lastMealId": "meal:lunch",
+    "updatedAt": 1700000000000
+   }
+  ],
+  "exercises": [
+   {
+    "id": "xe_fixture_ex1",
+    "pid": "p_fixture_a1",
+    "name": "Test Push-up",
+    "nameKey": "test push up",
+    "aliases": [],
+    "category": "strength",
+    "muscleGroups": [
+     "chest"
+    ],
+    "type": "bodyweight",
+    "targetKind": "reps",
+    "defaultTarget": 10,
+    "defaultTargetMax": null,
+    "perSide": false,
+    "kcal": {
+     "basis": "per_rep",
+     "value": 0.45,
+     "refWeightKg": 70,
+     "scaleByWeight": true
+    },
+    "difficulty": "beginner",
+    "instructions": "Synthetic.",
+    "notes": "",
+    "system": false,
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000,
+    "rev": 1
+   }
+  ],
+  "plans": [
+   {
+    "id": "pl_fixture_pl1",
+    "pid": "p_fixture_a1",
+    "name": "Test Plan",
+    "nameKey": "test plan",
+    "description": "",
+    "stepGoal": 7000,
+    "isRest": false,
+    "items": [
+     {
+      "itemId": "it_1",
+      "exerciseId": "ex:push-up",
+      "exerciseName": "Push-ups",
+      "targetKind": "reps",
+      "target": 10,
+      "targetMax": null,
+      "perSide": false,
+      "altExerciseIds": [],
+      "kcalOverride": null,
+      "kcalSnap": {
+       "basis": "per_rep",
+       "value": 0.45,
+       "refWeightKg": 70,
+       "scaleByWeight": true
+      },
+      "note": null
+     },
+     {
+      "itemId": "it_2",
+      "exerciseId": "ex:plank",
+      "exerciseName": "Plank",
+      "targetKind": "seconds",
+      "target": 30,
+      "targetMax": null,
+      "perSide": false,
+      "altExerciseIds": [],
+      "kcalOverride": null,
+      "kcalSnap": {
+       "basis": "per_minute",
+       "value": 4,
+       "refWeightKg": 70,
+       "scaleByWeight": true
+      },
+      "note": null
+     }
+    ],
+    "rev": 2,
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   }
+  ],
+  "foodLogs": [
+   {
+    "id": "fl_fixture_1",
+    "pid": "p_fixture_a1",
+    "date": "2025-03-10",
+    "loggedAt": 1700000000000,
+    "mealId": "meal:lunch",
+    "mealLabel": "Lunch",
+    "foodRef": "fd_fixture_rice1",
+    "foodKind": "food",
+    "foodName": "Test Rice",
+    "origin": "home",
+    "confidence": "typical",
+    "servingId": "s1",
+    "servingLabel": "1 cup (160 g)",
+    "servingUnit": "cup",
+    "servingBaseAmount": 160,
+    "basisUnit": "g",
+    "qty": 1,
+    "per1serving": {
+     "kcal": 208,
+     "protein": 4.32,
+     "carbs": 44.8,
+     "fat": 0.48,
+     "fiber": 0.64
+    },
+    "totals": {
+     "kcal": 208,
+     "protein": 4.3,
+     "carbs": 44.8,
+     "fat": 0.5,
+     "fiber": 0.6
+    },
+    "quick": false,
+    "note": null,
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   },
+   {
+    "id": "fl_fixture_2",
+    "pid": "p_fixture_b1",
+    "date": "2025-03-10",
+    "loggedAt": 1700000000000,
+    "mealId": "meal:other",
+    "mealLabel": "Other",
+    "foodRef": null,
+    "foodKind": "food",
+    "foodName": "Quick add",
+    "origin": null,
+    "confidence": "estimate",
+    "servingId": null,
+    "servingLabel": "1 serving",
+    "servingUnit": "serving",
+    "servingBaseAmount": 1,
+    "basisUnit": "serving",
+    "qty": 1,
+    "per1serving": {
+     "kcal": 300,
+     "protein": 10,
+     "carbs": 30,
+     "fat": 10,
+     "fiber": null
+    },
+    "totals": {
+     "kcal": 300,
+     "protein": 10,
+     "carbs": 30,
+     "fat": 10,
+     "fiber": null
+    },
+    "quick": true,
+    "note": null,
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   }
+  ],
+  "workoutLogs": [
+   {
+    "id": "wl_fixture_1",
+    "pid": "p_fixture_a1",
+    "date": "2025-03-10",
+    "startedAt": 1700000000000,
+    "planRef": "pl_fixture_pl1",
+    "planName": "Test Plan",
+    "planRev": 2,
+    "isRest": false,
+    "stepGoalSnap": 7000,
+    "items": [
+     {
+      "itemId": "it_1",
+      "exerciseRef": "ex:push-up",
+      "exerciseName": "Push-ups",
+      "targetKind": "reps",
+      "target": 10,
+      "targetMax": null,
+      "perSide": false,
+      "altExerciseIds": [],
+      "kcalBasis": {
+       "basis": "per_rep",
+       "value": 0.45,
+       "refWeightKg": 70,
+       "scaleByWeight": true
+      },
+      "kcalOverrideUsed": false,
+      "actual": 7,
+      "manualPct": null,
+      "pct": 70,
+      "pctSource": "calculated",
+      "kcalEst": 3.2,
+      "kcalFinal": 3.2,
+      "kcalLogOverride": null,
+      "note": null
+     },
+     {
+      "itemId": "it_2",
+      "exerciseRef": "ex:plank",
+      "exerciseName": "Plank",
+      "targetKind": "seconds",
+      "target": 30,
+      "targetMax": null,
+      "perSide": false,
+      "altExerciseIds": [],
+      "kcalBasis": {
+       "basis": "per_minute",
+       "value": 4,
+       "refWeightKg": 70,
+       "scaleByWeight": true
+      },
+      "kcalOverrideUsed": false,
+      "actual": null,
+      "manualPct": null,
+      "pct": null,
+      "pctSource": null,
+      "kcalEst": null,
+      "kcalFinal": null,
+      "kcalLogOverride": null,
+      "note": null
+     }
+    ],
+    "completionPct": 35,
+    "kcalTotal": 3.2,
+    "bodyWeightKg": 70,
+    "weightSource": "default",
+    "weightDate": null,
+    "weightStale": false,
+    "note": null,
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   }
+  ],
+  "days": [
+   {
+    "pid": "p_fixture_a1",
+    "date": "2025-03-10",
+    "water": {
+     "glasses": 4,
+     "glassMl": 500,
+     "ml": 2000
+    },
+    "steps": {
+     "count": 5830
+    },
+    "stepGoal": 7000,
+    "stepGoalSource": "plan",
+    "note": {
+     "text": "Synthetic note",
+     "tags": [
+      "travel"
+     ]
+    },
+    "flags": {},
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   },
+   {
+    "pid": "p_fixture_b1",
+    "date": "2025-03-10",
+    "water": {
+     "glasses": null,
+     "glassMl": 500,
+     "ml": null
+    },
+    "steps": {
+     "count": 0
+    },
+    "stepGoal": 7000,
+    "stepGoalSource": "default",
+    "note": null,
+    "flags": {},
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   }
+  ],
+  "sleepLogs": [
+   {
+    "id": "sl_fixture_1",
+    "pid": "p_fixture_a1",
+    "date": "2025-03-10",
+    "bedAt": "2025-03-09T23:15",
+    "wakeAt": "2025-03-10T06:40",
+    "durationMin": 445,
+    "durationSource": "times",
+    "quality": 4,
+    "napMin": null,
+    "note": null,
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   }
+  ],
+  "measurementTypes": [],
+  "measurements": [
+   {
+    "id": "ms_fixture_1",
+    "pid": "p_fixture_a1",
+    "typeId": "mt:weight",
+    "date": "2025-03-01",
+    "value": 72.5,
+    "unit": "kg",
+    "entered": null,
+    "note": null,
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   },
+   {
+    "id": "ms_fixture_2",
+    "pid": "p_fixture_a1",
+    "typeId": "mt:waist",
+    "date": "2025-03-01",
+    "value": 84,
+    "unit": "cm",
+    "entered": null,
+    "note": null,
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   }
+  ],
+  "checkins": [
+   {
+    "id": "ck_fixture_1",
+    "pid": "p_fixture_a1",
+    "date": "2025-03-08",
+    "periodDays": 7,
+    "periodStart": "2025-03-02",
+    "periodEnd": "2025-03-08",
+    "weight": 72.5,
+    "bodyFat": null,
+    "measurements": {},
+    "photos": [],
+    "autoStats": {
+     "avgKcal": 1800,
+     "avgProtein": 100,
+     "avgCarbs": 200,
+     "avgFat": 55,
+     "avgFiber": 20,
+     "avgSteps": 6500,
+     "avgSleepMin": 420,
+     "workoutCompletionAvg": 70,
+     "workoutSessions": 3,
+     "daysWithFood": 5,
+     "daysWithSteps": 6,
+     "daysWithSleep": 6,
+     "periodDays": 7,
+     "computedAt": 1700000000000
+    },
+    "note": "Synthetic check-in",
+    "createdAt": 1700000000000,
+    "updatedAt": 1700000000000
+   }
+  ],
+  "photos": []
+ }
+}

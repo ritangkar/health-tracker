@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; base-uri 'self'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Winter Arc icon maker</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+<main class="screen screen-narrow">
+  <h1>Winter Arc icon maker</h1>
+  <p>This page turns <code>icons/icon.svg</code> into the four PNG icons the app needs. The repository already ships these four files, so you only need this page if you change the icon.</p>
+  <ol class="stack-sm">
+    <li>Open this page from your GitHub Pages address, for example <code>https://USERNAME.github.io/REPO/tools/make-icons.html</code>. It does not work when opened as a file from your computer.</li>
+    <li>Press <strong>Make icons</strong>. Your browser downloads four files: icon-192.png, icon-512.png, icon-maskable-512.png and apple-touch-icon.png.</li>
+    <li>In your GitHub repository open the <code>icons</code> folder, choose Add file, Upload files, drag the four files in and commit.</li>
+    <li>Change <code>WA_VERSION</code> in <code>version.js</code> so phones fetch the new icons.</li>
+  </ol>
+  <p><button id="go" type="button" class="btn btn-primary">Make icons</button></p>
+  <p id="status" role="status" class="muted"></p>
+  <p class="small muted">You can delete the <code>tools</code> folder once the icons are uploaded.</p>
+</main>
+<script type="module" src="./make-icons.js"></script>
+</body>
+</html>
